@@ -53,26 +53,47 @@ git clone https://github.com/MahmoudRabea13/MediSuite-Ai-Agent.git
 cd MediSuite-Ai-Agent
 ```
 
-2. Install required dependencies:
+2. Install required dependencies using uv:
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
-3. Install system dependencies:
+3. Set up environment variables:
+```bash
+# Copy the example .env file
+cp .env.example .env
+
+# Edit .env and add your AWS credentials
+# AWS_ACCESS_KEY_ID=your-access-key-id
+# AWS_SECRET_ACCESS_KEY=your-secret-access-key
+```
+
+Alternatively, you can export them directly:
+```bash
+export AWS_ACCESS_KEY_ID="your-access-key-id"
+export AWS_SECRET_ACCESS_KEY="your-secret-access-key"
+```
+
+4. Install system dependencies:
 - Tesseract OCR ([Download](https://github.com/UB-Mannheim/tesseract/wiki))
 - Poppler ([Download](https://blog.alivate.com.au/poppler-windows/))
 
-4. Configure paths in `Agent.py`:
-```python
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-POPPLER_PATH = r'C:\Program Files\poppler-24.08.0\Library\bin'
+5. Configure paths (if needed):
+```bash
+export TESSERACT_CMD='/usr/bin/tesseract'  # Default for Linux
+export POPPLER_PATH='/usr/bin'  # Default for Linux
 ```
 
 ## Usage
 
-1. Start the application:
+1. Start the GUI application:
 ```bash
-python app.py
+uv run app.py
+```
+
+Or start the CLI application:
+```bash
+uv run main.py
 ```
 
 2. Choose your preferred interaction mode:

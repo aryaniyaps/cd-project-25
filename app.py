@@ -5,11 +5,21 @@ import threading
 import sys
 import os
 import re
+from dotenv import load_dotenv
 from Agent import MedicalCodingAgent
+from bedrock_implementation import BedrockImplementation
 from PIL import Image, ImageTk
 import time
 import subprocess
 import platform
+
+# Load environment variables from .env file
+load_dotenv()
+
+def initialize_llm():
+    """Initialize Bedrock LLM implementation."""
+    return BedrockImplementation()
+
 class MediSuiteGUI:
     def __init__(self, root):
         self.root = root
@@ -24,8 +34,10 @@ class MediSuiteGUI:
                 self.root.iconbitmap(icon_path)
         except:
             pass
-            
-        self.agent = MedicalCodingAgent()
+        
+        # Initialize LLM and agent
+        llm = initialize_llm()
+        self.agent = MedicalCodingAgent(llm=llm)
         self.agent_output_lock = threading.Lock()
         self.conversation_thread = None
         self.user_input_ready = threading.Event()

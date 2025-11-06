@@ -1,0 +1,17 @@
+[project]
+name = "medisuite-ai-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "boto3>=1.40.67",
+    "fuzzywuzzy>=0.18.0",
+    "pdf2image>=1.17.0",
+    "pillow>=12.0.0",
+    "pytesseract>=0.3.13",
+    "python-dotenv>=1.2.1",
+    "python-levenshtein>=0.27.3",
+    "python-magic>=0.4.27",
+    "reportlab>=4.4.4",
+]
