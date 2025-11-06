@@ -1,8 +1,6 @@
 # MediSuite-Ai-Agent
 A medical ai agent that helps automating the process of hospitals / insurance workflow 
 
-`Update` We secured Runner-up award in [GenAi Agent Hackathon Cairo 2025](https://github.com/stakpak/genai-agent-hackathon-cairo-2025) organized  by [Stackpak](https://github.com/stakpak)
-__________________________________________
 ## Features
 
 ### 1. Interactive Chat Interface
@@ -47,11 +45,7 @@ __________________________________________
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/MahmoudRabea13/MediSuite-Ai-Agent.git
-cd MediSuite-Ai-Agent
-```
+1. Install pre requisities
 
 2. Install required dependencies using uv:
 ```bash
@@ -132,22 +126,6 @@ uv run main.py
    - Confirm diagnostic codes
    - Generate CMS-1500 forms
    - Preview and export claims
-
-## Requirements
-
-See [requirements.txt](requirements.txt) for full list of dependencies.
-
-## Meet the Team
-
-| ![Team](Team.jpg) |
-|--------------------|
-
-<div align="center">
-
-| [Mohamed Abdallah](https://github.com/mohamedabdallah20) | [Mahmoud Rabea](https://github.com/MahmoudRabea13) | [Mostafa Mansour](mailto:mostafa.mansour97@hotmail.com) | [Ahmed Mansour](https://github.com/ahmedmansour5) | [Ali Afifi](https://github.com/Ali-Afifi) |
-|---------------------------------------------------------|---------------------------------------------------|---------------------------------------------------------|---------------------------------------------|---------------------------------------------|
-
-</div>
 
 ## License
 
